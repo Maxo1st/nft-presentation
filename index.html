@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cours NFT & Metaverse - Presentation - Proof of Attendance</title>
+</head>
+<body>
+    <h1>Cours NFT & Metaverse - Presentation - Proof of Attendance</h1>
+    <div id="check">
+        <p>Checking if you're in the Wifi Network of Université Paris Dauphine</p>
+        <button onclick="checkWifi(true)">Yes</button>
+        <button onclick="checkWifi(false)">No</button>
+    </div>
+    <div id="result" style="display:none;"></div>
+
+    <script>
+    function checkWifi(isInWifi) {
+        document.getElementById('check').style.display = 'none';
+        document.getElementById('result').style.display = 'block';
+        if (isInWifi) {
+            // Replace this URL with your actual POAP claim link when you receive it
+            window.location.href = 'https://poap.wesbite/testme-pres';
+        } else {
+            document.getElementById('result').innerHTML = "You are not in the school's wifi and therefore cannot prove your attendance. In order to get a 'Proof of Attendance' you must be logged into the school's wifi.";
+        }
+    }
+    </script>
+</body>
+</html>
